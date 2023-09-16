@@ -16,3 +16,14 @@ def index(request):
 
     context = {'pro_obj': pro_obj}
     return render(request, 'shop/index.html', context )
+
+def detail(request, id):
+    prod = Product.objects.get(id=id)
+
+    context = {'prod': prod}
+    return render(request, 'shop/detail.html', context )
+
+
+
+
+
